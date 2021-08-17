@@ -19,4 +19,27 @@
     --fw-medium: 500;
     --fw-bold: 700;
     --fw-black: 900;
+
 }
+
+/* Global Attributes */
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: var(--ff);
+    background: url(/images/pattern-background-desktop.svg);
+    background-repeat: repeat-x;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Card Styling */
