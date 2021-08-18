@@ -15,10 +15,14 @@
 
     --ff: 'Red Hat Display', sans-serif;
     --fs-small: 16px;
-    --fs-big: 24px;
+    --fs-big: 28px;
     --fw-medium: 500;
     --fw-bold: 700;
     --fw-black: 900;
+
+    /* Other */
+
+    --shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
 
 }
 
@@ -26,6 +30,7 @@
 
 html {
     box-sizing: border-box;
+    height: 100%;
 }
 
 *, *::after, *::before {
@@ -34,12 +39,112 @@ html {
 
 body {
     margin: 0;
+    height: 100%;
     font-family: var(--ff);
     background: url(/images/pattern-background-desktop.svg);
     background-repeat: repeat-x;
     display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 /* Card Styling */
+
+.container {
+    margin: auto;
+}
+
+.card {
+    width: clamp(300px, 90vw, 400px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    overflow: hidden; 
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+.card__description {
+    padding: 0 1.5em;
+}
+
+.card__tittle {
+    text-align: center;
+    font-weight: var(--fw-black);
+    font-size: var(--fs-big);
+    margin: 2.5rem 0 1.25rem 0;
+    color: var(--clr-dark-blue);
+}
+
+.card__paragraph {
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-small);
+    text-align: center;
+    color: var(--clr-desaturated-blue)
+}
+
+.card__product {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    padding: 1.25em 1.5em; 
+    background: var(--clr-very-pale-blue);
+    border-radius: 10px;
+}
+
+.card__price-container {
+    margin-left: 10px;
+}
+
+.card__duration {
+    margin: 0;
+    font-size: var(--fs-small);
+    font-weight: var(--fw-bold);
+    color: var(--clr-dark-blue);
+}
+
+.card__price {
+    margin: 0;
+    font-size: var(--fs-small);
+    font-weight: var(--fw-medium);
+    color: var(--clr-desaturated-blue);
+}
+
+.card__change-link {
+    margin-left: auto;
+    font-weight: var(--fw-medium);
+}
+
+.card__change-link:link {
+    color: var(--clr-bright-blue);
+}
+
+.card__button {
+    display: inline-block;
+    text-align: center;
+    font-weight: var(--fw-bold);
+    margin-top: 1.5rem;
+    text-decoration: none;
+    padding: .75em 0;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.card__button--first {
+    background: var(--clr-bright-blue);
+    color: white;
+    box-shadow: var(--shadow);
+}
+
+.card__button--second {
+    color: var(--clr-desaturated-blue);
+    margin-bottom: 2.5rem;
+}
+
+.attribution {
+    color: var(--clr-desaturated-blue);
+    text-align: center;
+}
+
+.attribution__link:link {
+    color: var(--clr-bright-blue)
+}
