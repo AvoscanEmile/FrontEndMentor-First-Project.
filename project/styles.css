@@ -6,7 +6,8 @@
     /* Color Palette */
 
     --clr-pale-blue: hsl(225, 100%, 94%);
-    --clr-bright-blue: hsl(245, 75%, 52%);
+    --clr-bright-blue: hsla(245, 75%, 52%, 1);
+    --clr-bright-blue-hover: hsla(245, 75%, 52%, 80%);
     --clr-very-pale-blue: hsl(225, 100%, 98%);
     --clr-desaturated-blue: hsl(224, 23%, 55%);
     --clr-dark-blue: hsl(223, 47%, 23%);
@@ -112,10 +113,16 @@ body {
 .card__change-link {
     margin-left: auto;
     font-weight: var(--fw-medium);
+    transition: all 100ms;
 }
 
 .card__change-link:link {
     color: var(--clr-bright-blue);
+}
+
+.card__change-link:hover {
+    color: var(--clr-bright-blue-hover);
+    text-decoration: none;
 }
 
 .card__button {
@@ -127,6 +134,7 @@ body {
     padding: .75em 0;
     width: 80%;
     border-radius: 10px;
+    transition: all 150ms;
 }
 
 .card__button--first {
@@ -135,14 +143,33 @@ body {
     box-shadow: var(--shadow);
 }
 
+.card__button--first:hover {
+    transform: scale(1.1);
+}
+
 .card__button--second {
     color: var(--clr-desaturated-blue);
     margin-bottom: 2.5rem;
 }
 
+.card__button--second:hover {
+    color: var(--clr-dark-blue);
+}
+
+/* Attribution links */
+
 .attribution {
     color: var(--clr-desaturated-blue);
     text-align: center;
+}
+
+.attribution__link {
+    transition: all 100ms;
+}
+
+.attribution__link:hover {
+    color: var(--clr-bright-blue-hover);
+    text-decoration: none;
 }
 
 .attribution__link:link {
