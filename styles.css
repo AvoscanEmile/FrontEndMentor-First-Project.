@@ -42,7 +42,7 @@ body {
     margin: 0;
     height: 100%;
     font-family: var(--ff);
-    background: url(/images/pattern-background-desktop.svg);
+    background: url(images/pattern-background-desktop.svg);
     background-repeat: repeat-x;
     display: flex;
 }
