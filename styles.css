@@ -31,6 +31,7 @@
 
 html {
     box-sizing: border-box;
+    background: var(--clr-pale-blue);
 }
 
 *, *::after, *::before {
@@ -57,7 +58,7 @@ body {
 
 .card {
     grid-area: card;
-    width: clamp(330px, 90vw, 430px);
+    width: clamp(330px, 90vw, 450px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,6 +70,9 @@ body {
 
 .card__description {
     padding: 0 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card__tittle {
@@ -83,7 +87,10 @@ body {
     font-weight: var(--fw-medium);
     font-size: var(--fs-small);
     text-align: center;
-    color: var(--clr-desaturated-blue)
+    color: var(--clr-desaturated-blue);
+    width: 90%;
+    margin-top: 0;
+    margin-bottom: 2rem;
 }
 
 .card__product {
@@ -93,6 +100,7 @@ body {
     padding: 1.25em 1.5em; 
     background: var(--clr-very-pale-blue);
     border-radius: 10px;
+    margin-bottom: 1rem;
 }
 
 .card__price-container {
