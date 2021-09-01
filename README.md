@@ -1,4 +1,4 @@
-# FrontEndMentor-First-Project.
+# Order summary component
 
 **If you want to see the live website you can do it here: https://avoscanemile.github.io/FrontEndMentor-First-Project./**
 
